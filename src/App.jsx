@@ -8,7 +8,7 @@ import Doctors from './components/Doctors.jsx';
 // import Branches from './components/Branches.jsx'; // Commented out the Branches import
 
 import Contacts from './components/Contacts.jsx';
-import Footer from './components/footer.jsx';
+import Footer from './components/Footer.jsx';
 import Testimonials from './components/Testimonials.jsx';
 
 const App = () => {
