@@ -1,0 +1,113 @@
+.testimonials {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: #f0f4f8; /* Soft light blue background for a calming effect */
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 32px; /* Larger font size for more impact */
+    margin-bottom: 30px;
+    color: #0d47a1; /* Dark blue for the header */
+    text-transform: uppercase; /* Uppercase letters for emphasis */
+    letter-spacing: 1px; /* Slightly spaced letters for a modern look */
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align cards */
+  }
+  
+  .testimonial-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for a floating effect */
+    padding: 25px;
+    margin: 15px;
+    width: 300px; /* Fixed width for cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    position: relative; /* Position for pseudo-element */
+    overflow: hidden; /* Prevents overflow */
+  }
+  
+  .testimonial-card h3 {
+    font-size: 22px; /* Slightly larger font size for names */
+    color: #333; /* Dark text color for names */
+    margin-bottom: 15px;
+    position: relative; /* Position for pseudo-element */
+  }
+  
+  .testimonial-card p {
+    font-size: 16px;
+    color: #555; /* Medium gray for review text */
+    line-height: 1.6; /* Increased line height for readability */
+  }
+  
+  .date {
+    display: block; /* Make date a block element */
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888; /* Light gray for the date */
+  }
+  
+  .testimonial-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  /* Pseudo-element for a decorative effect */
+  .testimonial-card:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: rgba(0, 168, 255, 0.1); /* Light blue overlay */
+    border-radius: 10px; /* Matches the card's border radius */
+    z-index: 0; /* Behind card content */
+  }
+  
+  .testimonial-card h3,
+  .testimonial-card p,
+  .date {
+    position: relative; /* Ensure content is above the pseudo-element */
+    z-index: 1; /* Above pseudo-element */
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .testimonial-card {
+      width: 90%; /* Full width on smaller devices */
+      margin: 10px 0; /* Reduce margin for better spacing */
+    }
+  
+    .testimonials h2 {
+      font-size: 26px; /* Smaller font size for headings */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonials {
+      padding: 20px; /* Reduce padding on very small screens */
+    }
+  
+    .testimonial-card {
+      width: 100%; /* Full width on very small devices */
+      padding: 20px; /* Reduce padding inside cards */
+    }
+  
+    .testimonial-card h3 {
+      font-size: 20px; /* Smaller font size for names */
+    }
+  
+    .testimonial-card p {
+      font-size: 15px; /* Smaller font size for review text */
+    }
+  
+    .date {
+      font-size: 13px; /* Smaller font size for dates */
+    }
+  }
+  

@@ -1,0 +1,108 @@
+/* General styles for the contacts page */
+.contacts-container {
+  position: relative;
+  text-align: center;
+  margin-top: 100px; /* Adjusted for space above, considering the navbar */
+  padding: 20px;
+}
+
+/* Styling the header */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styling the subheading (h3) */
+h3 {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Styling the paragraphs */
+.contacts-container p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* Styling the floating WhatsApp icon */
+.whatsapp-icon-link,
+.call-icon-link {
+  position: relative; /* Ensures positioning of text inside */
+  margin-top: 20px; /* Adjust the margin so the icon appears just below the content */
+  margin-bottom: 40px;
+  display: inline-block;
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: transform 0.3s ease-in-out; /* Maintain scaling effect on hover */
+  text-decoration: none; /* Removes underline on the link */
+  text-align: center;
+}
+
+/* Call icon button customization */
+.call-icon-link {
+  background-color: #007bff; /* Blue for the call button */
+  margin-left: 20px; /* Space between the icons */
+}
+
+/* Hover effect for both icons (scaling) */
+.whatsapp-icon-link:hover,
+.call-icon-link:hover {
+  transform: scale(1.1); /* Scaling effect on hover */
+}
+
+/* WhatsApp icon and Call icon color */
+.whatsapp-icon,
+.call-icon {
+  color: white;
+}
+
+/* Add Text below the icons */
+.icon-text {
+  visibility: hidden; /* Hide text by default */
+  font-size: 14px;
+  color: white;
+  margin-top: 10px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; /* Start as transparent */
+  transition-delay: 0.2s; /* Delay appearance of text */
+  position: absolute;
+  bottom: -30px; /* Adjust this value to position the text below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Hover effect for text visibility */
+.whatsapp-icon-link:hover .whatsapp-text,
+.call-icon-link:hover .call-text {
+  visibility: visible; /* Make text visible */
+  opacity: 1; /* Fade in the text */
+  transition: opacity 0.3s ease-in-out;
+  transition-delay: 0s; /* Text appears instantly after hover */
+}
+
+/* WhatsApp text styling */
+.whatsapp-text {
+  color: #25d366;
+  font-weight: bold;
+}
+
+/* Call text styling */
+.call-text {
+  color: #007bff;
+  font-weight: bold;
+}

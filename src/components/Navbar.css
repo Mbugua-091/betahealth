@@ -1,0 +1,94 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Reduced padding for less height */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(90deg, rgb(250, 105, 255) 0%, rgb(0, 255, 76) 100%);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for depth */
+  box-sizing: border-box; /* Include padding in total width */
+  border-radius: 4px;
+}
+.logo-image {
+  height: 50px;  /* Adjust the height */
+  width: auto;
+  display: block;
+  border-radius: 25px;
+}
+
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 10px; /* Reduced horizontal spacing between items */
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px; /* Reduced padding for nav items */
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Glowing effect */
+  background: rgba(255, 255, 255, 0.2); /* Light background on hover for contrast */
+}
+
+/* Logo styles */
+.logo {
+  margin-right: 10px; /* Reduce space between logo and nav items */
+  font-size: 24px; /* Increase logo font size */
+  font-weight: bold; /* Bold logo */
+  color: white; /* Logo color */
+}
+
+.hamburger {
+  display: none; /* Initially hide the hamburger icon */
+  cursor: pointer;
+  color: white;
+  font-size: 28px; /* Increase size for better visibility */
+  margin-right: 10px; /* Reduce space from the right edge */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* Adjust based on navbar height */
+      left: 0;
+      width: 100%;
+      background: linear-gradient(90deg, rgba(255, 105, 180, 1) 0%, rgba(255, 0, 150, 1) 100%);
+      padding: 10px 0; /* Add padding to the dropdown */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Optional shadow */
+      transition: all 0.3s; /* Smooth transition for dropdown */
+  }
+
+  .nav-links.mobile {
+      display: flex; /* Show nav links when mobile menu is open */
+  }
+
+  .nav-links li {
+      margin: 10px 0; /* Vertical spacing between items */
+      padding: 0 15px; /* Add horizontal padding to avoid cutting off */
+  }
+
+  .hamburger {
+      display: block; /* Show hamburger icon on mobile */
+      margin-right: 10px; /* Further reduce space to make it more visible */
+  }
+}

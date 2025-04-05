@@ -1,0 +1,174 @@
+/* Footer Container */
+.footer {
+  width: 100%;
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%; /* Ensure full width */
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+  margin: 20px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-description {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #e0e0e0;
+  overflow-wrap: break-word;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+  color: #ffeb3b;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ffeb3b;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffeb3b;
+  transform: scale(1.1);
+}
+
+/* Branch Locations */
+.footer-branches {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-branches li {
+  margin-bottom: 8px;
+}
+
+.footer-branches a {
+  text-decoration: none;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.footer-branches a:hover {
+  color: #ffeb3b;
+}
+
+.location-icon {
+  margin-right: 8px;
+  transition: transform 0.3s;
+}
+
+.footer-branches a:hover .location-icon {
+  transform: scale(1.1);
+  color: #ffeb3b;
+}
+
+/* Phone Numbers & WhatsApp */
+.footer-column p a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-column p a .whatsapp-icon {
+  margin-left: 10px;
+  color: #25D366; /* WhatsApp's green color */
+}
+
+.footer-column p a:hover {
+  color: #ffeb3b;
+}
+
+.footer-column p a:hover .whatsapp-icon {
+  transform: scale(1.2); /* Scale the icon on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    text-align: center; /* Center text */
+  }
+
+  .footer-column {
+    margin: 15px 0;
+    text-align: center; /* Ensure text is centered in each column */
+  }
+
+  .social-icons {
+    justify-content: center; /* Center the social icons */
+    gap: 10px; /* Reduce gap for smaller screens if needed */
+  }
+
+  .footer-branches {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align branch locations */
+  }
+
+  .footer-branches li {
+    text-align: center; /* Center the text of branch locations */
+  }
+}

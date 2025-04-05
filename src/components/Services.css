@@ -1,0 +1,261 @@
+.services {
+  margin-top: 60px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.services h2 {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.service-category {
+  margin-bottom: 40px;
+}
+
+.service-category h3 {
+  font-size: 28px;
+  color: #0d47a1;
+  margin-bottom: 15px;
+}
+
+/* Video Styling */
+.service-video video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+/* Video Placeholder Styling */
+.service-video {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.video-placeholder {
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  color: #555;
+  font-size: 16px;
+}
+
+.subcategory {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.subcategory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subcategory-header:hover {
+  background-color: #f0f0f0;
+}
+
+.subcategory-header h4 {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+.subcategory-header span {
+  font-size: 20px;
+  color: #0d47a1;
+}
+
+.subcategory-content {
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ddd;
+}
+
+.subcategory-content p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .services {
+    padding: 15px;
+  }
+
+  .service-category h3 {
+    font-size: 24px;
+  }
+
+  .video-placeholder {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  /* Video Responsive Styling */
+  .service-video video {
+    max-width: 100%;
+  }
+
+  /* Interview Section Styles */
+  .interview-section {
+    padding: 15px;
+  }
+
+  .interview-section h3 {
+    font-size: 20px;
+  }
+
+  .interview-video h4 {
+    font-size: 18px;
+  }
+
+  .interview-video p {
+    font-size: 14px;
+  }
+
+  .interview-video video {
+    max-width: 100%;
+  }
+}
+
+/* Styles for the Interview Section (using Flexbox) */
+.interview-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between the videos */
+}
+
+.interview-section h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.interview-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.interview-video h4 {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.interview-video p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Video styling */
+.interview-video video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Flexbox for layout on larger screens (rows) */
+@media screen and (min-width: 768px) {
+  .interview-section {
+    display: flex;
+    flex-direction: row; /* Set the video sections to be side-by-side on large screens */
+    justify-content: space-between; /* Space between the videos */
+    align-items: flex-start;
+  }
+
+  .interview-video {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .interview-video:last-child {
+    margin-right: 0;
+  }
+
+  .interview-video h4 {
+    font-size: 18px;
+  }
+
+  .interview-video p {
+    font-size: 14px;
+  }
+}
+
+/* Media Queries for Mobile Devices (Stack videos in column) */
+@media screen and (max-width: 768px) {
+  .interview-section {
+    display: flex;
+    flex-direction: column; /* Stack the video sections on smaller screens */
+  }
+
+  .interview-video {
+    width: 100%; /* Make each video take full width on smaller screens */
+    margin-right: 0;
+  }
+
+  .interview-video h4 {
+    font-size: 18px;
+  }
+
+  .interview-video p {
+    font-size: 14px;
+  }
+
+  .interview-video video {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .interview-section h3 {
+    font-size: 18px;
+  }
+
+  .interview-video h4 {
+    font-size: 16px;
+  }
+
+  .interview-video p {
+    font-size: 12px;
+  }
+
+  .interview-video video {
+    max-width: 100%;
+  }
+}
+
+.subcategory-header h4 {
+  font-size: 18px;
+}
+
+.subcategory-header span {
+  font-size: 18px;
+}
+
+.subcategory-content p {
+  font-size: 14px;
+}

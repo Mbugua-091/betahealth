@@ -1,0 +1,90 @@
+/* Branches.css */
+.branches-container {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  .location-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-branches {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+  
+  .footer-branches li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-branches a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+  }
+  
+  .location-icon {
+    margin-right: 8px;
+    color: red;
+  }
+  
+  /* Box styling for each location */
+  .location-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .location {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .location h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive map iframe adjustments */
+  @media (max-width: 768px) {
+    .location iframe {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .location-title {
+      font-size: 18px;
+    }
+  
+    .location iframe {
+      height: 150px;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .location iframe {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .location-title {
+      font-size: 18px;
+    }
+  
+    .location iframe {
+      height: 150px;
+    }
+  }
+  

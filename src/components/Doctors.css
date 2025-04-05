@@ -1,0 +1,56 @@
+/* Doctor's Gallery Grid Styling */
+.doctors-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for flexibility */
+  gap: 20px;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+/* Individual Doctor Item Styling */
+.doctor-item {
+  position: relative;
+  text-align: center;
+}
+
+/* Doctor Image Styling */
+.doctor-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+/* Caption Styling for Doctor Name/Info */
+.doctor-item p {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for contrast */
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 0 0 10px 10px; /* Rounded corners for the bottom */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+  transition: background-color 0.3s ease-in-out; /* Smooth background color change */
+}
+
+/* Hover Effect for Doctor Images */
+.doctor-item img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Hover Effect for Caption (Text) */
+.doctor-item:hover p {
+  background-color: rgba(255, 0, 0, 0.8); /* Change to red with slight transparency on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .doctor-item p {
+      font-size: 14px; /* Slightly smaller text for mobile */
+      padding: 8px;
+  }
+}
