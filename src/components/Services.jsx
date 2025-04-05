@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Services.css';
+import { FaClinicMedical, FaHeartbeat, FaLeaf, FaStethoscope, FaMedkit, FaBone } from 'react-icons/fa';
 
 // LazyVideo component
 const LazyVideo = ({ src, poster, width = 320, height = 240 }) => {
@@ -45,38 +46,62 @@ const Services = () => {
 
   const services = [
     {
-      category: "Diagnostics",
-      video: "/diagnosis.mp4",
-      poster: "/poster-diagnosis.jpg",
+      category: "Wellness",
+      icon: <FaLeaf />, // Icon for Wellness
+      video: "/Wellnes.mp4",
+      poster: "/picha3.jpg",
       subcategories: [
-        { name: "General Consultation", description: "A thorough examination and discussion with a healthcare provider to determine your medical needs." },
-        { name: "Lab Services", description: "A variety of lab tests including blood work, urine analysis, and more to diagnose and monitor conditions." },
-        { name: "X-Ray", description: "Advanced imaging to assist in diagnosing bone, joint, and chest conditions." },
-        { name: "Ultrasound", description: "Non-invasive imaging to view organs, tissues, and monitor pregnancies." },
+        { name: "Herbal Remedies", description: "Our herbal remedies provide natural solutions to promote overall health and manage specific health concerns." },
+        { name: "Skincare", description: "We offer treatments for various skin conditions, promoting healthy, glowing skin and restoring your confidence." },
+        { name: "Weight Management", description: "Our personalized weight loss and management programs are designed to help you achieve and maintain a healthy weight." },
+        { name: "Guidance and Counseling", description: "Our counseling services provide support for mental health, emotional challenges, and life guidance, ensuring you receive the care you need to thrive." },
+      ],
+    },
+    {
+      category: "Diagnostics",
+      icon: <FaClinicMedical />, // Icon for Diagnostics
+      video: "/Diagnosis.mp4",
+      poster: "/picha1.jpg",
+      subcategories: [
+        { name: "General Consultation", description: "We offer comprehensive consultations where our experienced healthcare providers listen to your concerns and conduct a thorough examination to assess your medical needs." },
+        { name: "Lab Services", description: "Our state-of-the-art lab services include a wide range of tests, from blood work to urine analysis, helping us diagnose and monitor your health conditions with precision." },
+        { name: "X-Ray", description: "Our X-ray services offer advanced imaging to diagnose bone, joint, and chest conditions. The images are carefully analyzed by specialists to provide you with accurate results." },
+        { name: "Ultrasound", description: "Non-invasive ultrasound services that allow us to view your organs, tissues, and monitor pregnancies. Our technicians use the latest equipment to provide clear, detailed results." },
       ],
     },
     {
       category: "Clinics",
-      video: "/clinics.mp4",
-      poster: "/poster-clinics.jpg",
+      icon: <FaStethoscope />, // Icon for Clinics
+      video: "/Clinics.mp4",
+      poster: "picha2.jpg",
       subcategories: [
-        { name: "Nutritional Clinics", description: "Expert advice on diet and nutrition for improved health and well-being." },
-        { name: "Fertility Clinics", description: "Consultation and treatment for reproductive health and fertility issues." },
-        { name: "Gastroenterology", description: "Specialized care for digestive system issues, including stomach and intestinal health." },
-        { name: "Diabetes & Hypertension", description: "Management and treatment options for diabetes and high blood pressure." },
-        { name: "Libido Clinics", description: "Consultations to address concerns related to sexual health and libido." },
-        { name: "Arthritis", description: "Treatment and management options for joint pain and arthritis." },
+        { name: "Nutritional Clinics", description: "Our nutritional clinics provide expert advice on diet and nutrition to help you improve your overall health and well-being." },
+        { name: "Fertility Clinics", description: "We offer consultations and treatments for reproductive health and fertility issues, providing comprehensive care and support for your family planning journey." },
+        { name: "Gastroenterology", description: "Our gastroenterology clinics specialize in diagnosing and treating digestive system issues, including stomach, intestine, and liver problems." },
+        { name: "Diabetes & Hypertension", description: "We provide comprehensive management and treatment options for diabetes and hypertension, helping you manage these conditions effectively." },
+        { name: "Libido Clinics", description: "Our libido clinics focus on addressing concerns related to sexual health and libido, offering treatments and consultations tailored to your needs." },
+        { name: "Arthritis", description: "We offer treatment and management options for arthritis, helping you manage joint pain and improve your quality of life." },
+      ],
+    },
+ 
+    {
+      category: "Emergency Care",
+      icon: <FaMedkit />, // Icon for Emergency Care
+      video: "/Emergency.mp4",
+      poster: "/picha4.jpg",
+      subcategories: [
+        { name: "Emergency Services", description: "Our emergency services are available 24/7, providing immediate care for critical conditions and urgent medical situations." },
+        { name: "First Aid Training", description: "We offer first aid training to empower individuals with life-saving skills and the knowledge to respond effectively to medical emergencies." },
       ],
     },
     {
-      category: "Wellness",
-      video: "/wellnes.mp4",
-      poster: "/poster-wellness.jpg",
+      category: "Orthopedics",
+      icon: <FaBone />, // Icon for Orthopedics
+      video: "/Orthopedics.mp4",
+      poster: "/picha5.jpg",
       subcategories: [
-        { name: "Herbal Remedies", description: "Natural remedies to promote overall health and manage specific health issues." },
-        { name: "Skincare", description: "Treatments for a variety of skin conditions, promoting healthy and glowing skin." },
-        { name: "Weight Management", description: "Personalized weight loss and management programs." },
-        { name: "Guidance and Counseling", description: "Support for mental health, emotional issues, and general life guidance." },
+        { name: "Bone Fracture Treatment", description: "We provide advanced treatment for bone fractures, offering personalized care for a swift and effective recovery." },
+        { name: "Joint Replacement", description: "Our orthopedic team specializes in joint replacement surgeries, ensuring a safe and successful recovery process." },
       ],
     },
   ];
@@ -87,16 +112,13 @@ const Services = () => {
 
       {services.map((service, index) => (
         <div key={index} className="service-category">
-          <h3>{service.category}</h3>
+          <h3>{service.category} {service.icon}</h3> {/* Render icon here */}
           <div className="service-video">
             <LazyVideo src={service.video} poster={service.poster} width={640} height={360} />
           </div>
           {service.subcategories.map((subcategory, subIndex) => (
             <div key={subIndex} className="subcategory">
-              <div
-                className="subcategory-header"
-                onClick={() => toggleSubcategory(`${index}-${subIndex}`)}
-              >
+              <div className="subcategory-header" onClick={() => toggleSubcategory(`${index}-${subIndex}`)}>
                 <h4>{subcategory.name}</h4>
                 <span>{activeSubcategory === `${index}-${subIndex}` ? '-' : '+'}</span>
               </div>
@@ -109,28 +131,6 @@ const Services = () => {
           ))}
         </div>
       ))}
-
-      {/* Section for Interview Videos */}
-      <h3>Interview with Dr. Ngetchu on Women's Reproductive Health</h3>
-      <div className="interview-section">
-        <div className="interview-video">
-          <h4>Understanding Women's Reproductive Health</h4>
-          <LazyVideo src="/intaview1.mp4" poster="/poster-interview1.jpg" />
-          <p>
-            In this interview, Dr. Ngetchu discusses key aspects of women's reproductive health,
-            focusing on common concerns and the importance of awareness.
-          </p>
-        </div>
-
-        <div className="interview-video">
-          <h4>Addressing Challenges in Women's Health</h4>
-          <LazyVideo src="/intaview2.mp4" poster="/poster-interview2.jpg" />
-          <p>
-            Dr. Ngetchu delves into the challenges women face when it comes to reproductive health
-            and offers advice on managing these issues effectively.
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
