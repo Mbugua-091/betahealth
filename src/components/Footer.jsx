@@ -20,7 +20,7 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul className="footer-links">
             <li><Link to="/testimonials">Reviews</Link></li>
-            <li><Link to="/doctors">Services</Link></li>
+            <li><Link to="/services">Services</Link></li>
             <li><Link to="/branches">Branches</Link></li>
             <li><Link to="/contacts">Message us</Link></li>
             <li><Link to="/about">About Us</Link></li>
@@ -68,7 +68,7 @@ const Footer = () => {
         <div className="footer-column">
           <h3>Branch Locations</h3>
           <ul className="footer-branches">
-            <li><a href="https://goo.gl/maps/example1" target="_blank" rel="noopener noreferrer"><FaMapMarkerAlt className="location-icon" /> Kayole Masimba stage</a></li>
+            <li><a href="https://maps.app.goo.gl/2cKn7rhVJ16WA8iS7" target="_blank" rel="noopener noreferrer"><FaMapMarkerAlt className="location-icon" /> Kayole Masimba stage</a></li>
             <li><a href="https://g.co/kgs/ivoXywC" target="_blank" rel="noopener noreferrer"><FaMapMarkerAlt className="location-icon" /> Githurai</a></li>
             <li><a href="https://maps.app.goo.gl/XUWGRwp4DpK1o65MA" target="_blank" rel="noopener noreferrer"><FaMapMarkerAlt className="location-icon" /> Thika</a></li>
             <li><a href="https://maps.app.goo.gl/T6wizpi2w7UzYedt9" target="_blank" rel="noopener noreferrer"><FaMapMarkerAlt className="location-icon" /> Kawangware</a></li>
@@ -82,6 +82,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         &copy; {new Date().getFullYear()} Beta Clinic. All rights reserved.
+        <h6><a href="https://wa.me/254794134980">Developed By msambweni web developers</a></h6>
       </div>
     </footer>
   );
