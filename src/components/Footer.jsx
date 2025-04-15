@@ -76,6 +76,7 @@ const Footer = () => {
             <li><a href="https://g.co/kgs/LN5AtSG" rel="noopener noreferrer"><FaMapMarkerAlt className="location-icon" /> Eldoret</a></li>
             <li><a href="https://maps.app.goo.gl/psxujoQVPVpFGeSF6" target="_blank" rel="noopener noreferrer"><FaMapMarkerAlt className="location-icon" /> Mombasa</a></li>
             <li><a href="https://maps.app.goo.gl/h8rrU3PkS3Ao7wVu5" target="_blank" rel="noopener noreferrer"><FaMapMarkerAlt className="location-icon" /> Nakuru</a></li>
+            <li><a href="https://maps.app.goo.gl/JRy9xLLAYS32aXB7A" target="_blank" rel="noopener noreferrer"><FaMapMarkerAlt className="location-icon" /> Kerugoya</a></li>
           </ul>
         </div>
       </div>
